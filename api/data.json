@@ -1,0 +1,46 @@
+[
+    {
+        "uid": 10023,
+        "name": "Randy Taylor",
+        "birthDay": "4/1/1975",
+        "address": "126 Plum St",
+        "phone": "(540)-575-2806",
+        "username": "randy.taylor",
+        "email": "randy.taylor@example.com",
+        "password": "098f6bcd4621d373cade4e832627b4f6",
+        "avatar": "https://randomuser.me/api/portraits/men/1.jpg"
+    },
+    {
+        "uid": 10024,
+        "name": "Aiden Jones",
+        "birthDay": "6/2/1952",
+        "address": "3660 Dogwood Ave",
+        "phone": "(547)-845-8161",
+        "username": "aiden.jones",
+        "email": "aiden.jones@example.com",
+        "password": "098f6bcd4621d373cade4e832627b4f6",
+        "avatar": "https://randomuser.me/api/portraits/men/52.jpg"
+    },
+    {
+        "uid": 10025,
+        "name": "Irene Jensen",
+        "birthDay": "11/7/1971",
+        "address": "1693 College St",
+        "phone": "(122)-074-1647",
+        "username": "irene.jensen",
+        "email": "irene.jensen@example.com",
+        "password": "098f6bcd4621d373cade4e832627b4f6",
+        "avatar": "https://randomuser.me/api/portraits/women/3.jpg"
+    },
+    {
+        "uid": 10026,
+        "name": "Lillian Lawson",
+        "birthDay": "12/7/1986",
+        "address": "5943 Photinia Ave",
+        "phone": "(482)-813-4148",
+        "username": "lillian.lawson",
+        "email": "lillian.lawson@example.com",
+        "password": "098f6bcd4621d373cade4e832627b4f6",
+        "avatar": "https://randomuser.me/api/portraits/women/21.jpg"
+    }
+]
