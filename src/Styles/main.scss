@@ -1,13 +1,8 @@
 $bg-color: rgb(2, 0, 36);
 
-body {
-  background: $bg-color;
-  background: linear-gradient(
-    345deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.default-body {
+    background: $bg-color;
+    background: linear-gradient(345deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }

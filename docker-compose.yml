@@ -1,14 +1,30 @@
 version: '3.8'
 services:
-  react-phone-formatter:
-    build: .
-    ports: 
-      #- '3000:3000'
-      - '3001:3001'
-      - '8080:80'
-    volumes:
-      #- ./src:/react-app/src
-      - ./api:/api-server 
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-      - API_PORT=3001
+    # react-login-demo-ui:
+    #   build:
+    #     context: ./
+    #     target: react-ui
+    #   ports:
+    #     - '3000:3000'
+    #   volumes:
+    #     - ./src:/app/src
+    #   environment:
+    #     - CHOKIDAR_USEPOLLING=true
+    react-login-demo-ui-static:
+        build:
+            context: ./
+            target: web-static
+        ports:
+            - '80:8080'
+    react-login-demo-api:
+        build:
+            context: ./
+            target: express-api
+        ports:
+            - '3001:3001'
+        volumes:
+            - ./api:/app/api
+        environment:
+            - PORT=3001
+            - REFRESH_TOKEN_SECRET='018e420505cb8479909e67f8d6b03972ccbed03c3f82dfc4e1e433fc423d3eff29318c033c85858283a55db8c47757fb6829249993d49821e1e452f42971233e'
+            - ACCESS_TOKEN_SECRET='864baa039b54ed4a9c9cc65d8b3e787295a5f776a22b04eb0b7739f5348a9d47156db601950802bffd0a6d864f198efa7fd859ae3204a4b725b66a0223c84c89'

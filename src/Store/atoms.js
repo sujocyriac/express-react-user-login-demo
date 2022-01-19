@@ -10,7 +10,12 @@ export const password = atom({
     default: '',
 });
 
-export const userData = atom({
-    key: 'userData',
-    default: {},
+export const submitToggle = atom({
+    key: 'submitToggle',
+    default: false,
+});
+
+export const hasError = atom({
+    key: 'hasError',
+    default: false,
 });

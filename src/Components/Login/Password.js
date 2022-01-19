@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import TextInput from 'Components/Core/Input';
-import { useRecoilState } from 'recoil';
-import { password } from 'Store/atoms';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { password, submitToggle } from 'Store/atoms';
 import styles from 'Components/Login/styles';
 
 /**
@@ -9,25 +9,29 @@ import styles from 'Components/Login/styles';
  * into global state.
  */
 const Password = () => {
-    const { inputs } =
-        styles();
-    const [value, setValue] =
-        useRecoilState(
-            password
-        );
+    const { inputs } = styles();
+    const [value, setValue] = useRecoilState(password);
+    const [error, setError] = useState(false);
+    const toggle = useRecoilValue(submitToggle);
+
+    useEffect(() => {
+        if (toggle && !value) setError(true);
+    }, [value, toggle]);
+
     return (
         <TextInput
+            error={error}
             label="Password"
             type="password"
             placeholder="Input your password"
             className={inputs}
+            helperText={error ? 'Required!' : ''}
             value={value}
             onChange={event => {
-                setValue(
-                    event
-                        .target
-                        .value
-                );
+                setValue(event.target.value);
+            }}
+            onBlur={event => {
+                setError(!event.target.value);
             }}
         />
     );
