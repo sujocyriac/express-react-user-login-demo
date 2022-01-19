@@ -1,5 +1,6 @@
 version: '3.8'
 services:
+    # only for development
     # react-login-demo-ui:
     #   build:
     #     context: ./
@@ -15,7 +16,7 @@ services:
             context: ./
             target: web-static
         ports:
-            - '80:8080'
+            - '8080:80'
     react-login-demo-api:
         build:
             context: ./

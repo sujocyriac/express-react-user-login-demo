@@ -13,8 +13,8 @@ In the project root directory (where you can see Dockerfile, docker-compose etc.
 
 ### `docker compose up`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in the production mode.\
+Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
 for login to the app use following usernames
 and passwords

@@ -2,6 +2,7 @@ FROM node:latest as build
 WORKDIR /app
 COPY package.json .
 
+# only for development
 # FROM build as react-ui
 # RUN npm install
 # COPY . .
@@ -11,7 +12,6 @@ FROM build as web-build
 RUN npm install
 COPY . .
 RUN npm run build
-
 
 FROM nginx:latest as web-static
 COPY --from=web-build /app/build /usr/share/nginx/html
